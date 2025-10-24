@@ -89,7 +89,10 @@ print(temp_output["input_ids"])
 outputs = model.generate(
     input_ids=temp_output["input_ids"],
     max_new_tokens=1,
-    do_sample=True,
+    use_cache=False,
+    do_sample=False,
+    output_attentions=False,
+    output_hidden_states=False,
     temperature=0.7,
     top_k=50,
     top_p=0.95,
